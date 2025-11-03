@@ -19,6 +19,7 @@ interface Project {
   solutions?: string[];
   liveUrl?: string;
   githubUrl?: string;
+  slug?: string;
 }
 
 // Check if admin features should be enabled
