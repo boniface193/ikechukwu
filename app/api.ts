@@ -53,7 +53,12 @@ export const projectService = {
 
   // Delete project
   async deleteExistingProject(formData: FormData) {
-    const response = await fetch(`/api/images?url=${encodeURIComponent(formData?.image)}`, {
+    // Get the image URL from formData using .get() method
+    const imageUrl = formData.get('image') as string;
+    if (!imageUrl) {
+      throw new Error('No image URL provided for deletion');
+    }
+    const response = await fetch(`/api/images?url=${encodeURIComponent(imageUrl)}`, {
       method: 'DELETE',
     });
 

@@ -374,11 +374,11 @@
   },
   {
     "id": 9,
-    "title": "hj",
-    "description": "dfg",
+    "title": "man o war",
+    "description": "none the less",
     "category": "Full Stack",
-    "image": "/portfolio-default.jpg",
-    "slug": "hj",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762209420/portfolio/projects/nbdjtv8ls8yorcjcvgmz.png",
+    "slug": "man-o-war",
     "overview": "",
     "role": "",
     "tasks": [],
@@ -388,7 +388,7 @@
     "technologies": [],
     "liveUrl": "",
     "githubUrl": "",
-    "createdAt": "2025-11-03T22:19:29.446Z",
-    "updatedAt": "2025-11-03T22:19:29.446Z"
+    "createdAt": "2025-11-03T22:37:08.090Z",
+    "updatedAt": "2025-11-03T22:37:08.090Z"
   }
 ]
