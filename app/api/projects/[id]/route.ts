@@ -35,8 +35,20 @@ interface Project {
   id: number;
   title: string;
   description: string;
-  updatedAt?: string;
-  // Add other project properties as needed
+  category: string;
+  image: string; // Add this line
+  slug: string;
+  overview?: string;
+  role?: string;
+  tasks?: string[];
+  achievements?: string[];
+  challenges?: string[];
+  solutions?: string[];
+  technologies?: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 async function writeProjects(projects: Project[]): Promise<void> {
