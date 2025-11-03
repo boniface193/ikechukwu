@@ -10,6 +10,27 @@ import { projectService } from "./api";
 // Check if admin features should be enabled
 const isAdminEnabled = process.env.NEXT_PUBLIC_ADMIN_ENABLED === 'true';
 
+// Define the complete Project interface
+interface Project {
+  id?: number;
+  title: string;
+  description: string;
+  category: string;
+  image: string;
+  slug: string;
+  overview?: string;
+  role?: string;
+  tasks?: string[];
+  achievements?: string[];
+  technologies?: string[];
+  challenges?: string[];
+  solutions?: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,33 +40,30 @@ export default function RootLayout({
   const [projects, setProjects] = useState<Project[]>([]);
   const [showProjectForm, setShowProjectForm] = useState(false);
 
-  interface Project {
-    id?: string;
-    slug: string;
-    title: string;
-    description?: string;
-    image?: string;
-    category?: string;
-  }
-
   useEffect(() => {
     async function fetchProjects() {
       try {
         const projectsData = await projectService.getProjects();
         setProjects(projectsData);
       } catch (error) {
-        return error;
+        console.error('Error fetching projects:', error);
       }
     }
     fetchProjects();
   }, []);
 
   // Payload for creating a new project (id is assigned by backend)
-  const handleCreateProject = async (projectData: Omit<Project, 'id'>) => {
-    await projectService.createProject(projectData);
-    setShowProjectForm(false);
+  const handleCreateProject = async (projectData: Project) => {
+    try {
+      await projectService.createProject(projectData);
+      // Refresh projects after creation
+      const updatedProjects = await projectService.getProjects();
+      setProjects(updatedProjects);
+      setShowProjectForm(false);
+    } catch (error) {
+      console.error('Error creating project:', error);
+    }
   };
-
 
   return (
     <html lang="en">
@@ -90,7 +108,7 @@ export default function RootLayout({
                       {projects.map((project) => (
                         <li key={project.id}>
                           <Link
-                            href={`/projects/${project.id}?id=${project.slug}`}
+                            href={`/projects/${project.slug}`}
                             className="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors"
                           >
                             {project.title}
@@ -101,14 +119,15 @@ export default function RootLayout({
                   </div>
                 </div>
 
-                {isAdminEnabled && (<button
-                  onClick={() => setShowProjectForm(true)}
-                  className="flex items-center cursor-pointer gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-all"
-                >
-                  <FaPlus className="text-sm" />
-                  Add Project
-                </button>)
-                }
+                {isAdminEnabled && (
+                  <button
+                    onClick={() => setShowProjectForm(true)}
+                    className="flex items-center cursor-pointer gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-all"
+                  >
+                    <FaPlus className="text-sm" />
+                    Add Project
+                  </button>
+                )}
 
                 <a
                   target='_blank'
@@ -129,7 +148,7 @@ export default function RootLayout({
                     {projects.map((project) => (
                       <Link
                         key={project.id}
-                        href={`/projects/${project.slug}?id=${project.id}`}
+                        href={`/projects/${project.slug}`}
                         className="block px-2 py-1 text-gray-600 hover:text-purple-700 transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
@@ -138,16 +157,18 @@ export default function RootLayout({
                     ))}
                   </div>
 
-                  <button
-                    onClick={() => {
-                      setShowProjectForm(true);
-                      setIsMenuOpen(false);
-                    }}
-                    className="flex items-center cursor-pointer justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-all"
-                  >
-                    <FaPlus className="text-sm" />
-                    Add Project
-                  </button>
+                  {isAdminEnabled && (
+                    <button
+                      onClick={() => {
+                        setShowProjectForm(true);
+                        setIsMenuOpen(false);
+                      }}
+                      className="flex items-center cursor-pointer justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-all"
+                    >
+                      <FaPlus className="text-sm" />
+                      Add Project
+                    </button>
+                  )}
 
                   <a
                     target='_blank'
@@ -168,7 +189,9 @@ export default function RootLayout({
           <ProjectForm
             onSave={handleCreateProject}
             onCancel={() => setShowProjectForm(false)}
-            isEditing={false} project={undefined} />
+            isEditing={false}
+            project={undefined}
+          />
         )}
 
         {children}
