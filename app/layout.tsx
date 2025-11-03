@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaPlus } from "react-icons/fa";
 import ProjectForm from "./components/forms";
-import { projectService } from "./api";
+import { ProjectData, projectService } from "./api";
 
 // Check if admin features should be enabled
 const isAdminEnabled = process.env.NEXT_PUBLIC_ADMIN_ENABLED === 'true';
@@ -53,7 +53,7 @@ export default function RootLayout({
   }, []);
 
   // Payload for creating a new project (id is assigned by backend)
-  const handleCreateProject = async (projectData: Project) => {
+  const handleCreateProject = async (projectData: ProjectData) => {
     try {
       await projectService.createProject(projectData);
       // Refresh projects after creation
