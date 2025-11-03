@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { deleteImage, getPublicIdFromUrl } from '@/lib/cloudinary';
@@ -44,11 +45,11 @@ async function writeProjects(projects: Project[]): Promise<void> {
 }
 
 // GET single project by ID
-export async function GET(request: Request, { params }: { params: { id: string } }): Promise<NextResponse> {
+export async function GET(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   try {
 
     const projects: Project[] = await readProjects();
-    const { id } = params;
+    const { id } = await context.params;
     const project: Project | undefined = projects.find(p => p.id === parseInt(id));
 
     if (!project) {
