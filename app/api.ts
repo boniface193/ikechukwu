@@ -68,7 +68,7 @@ export const projectService = {
     return response.json();
   },
 
-  async uploadToCloudinary(formData: FormData) {
+  async uploadToCloudinary(formData: FormData): Promise<{ imageUrl: string }> {
     const response = await fetch('/api/upload', {
       method: 'POST',
       body: formData,
