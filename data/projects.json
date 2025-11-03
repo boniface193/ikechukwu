@@ -371,5 +371,24 @@
     "githubUrl": "",
     "createdAt": "2025-11-03T21:06:48.017Z",
     "updatedAt": "2025-11-03T21:11:00.418Z"
+  },
+  {
+    "id": 9,
+    "title": "hj",
+    "description": "dfg",
+    "category": "Full Stack",
+    "image": "/portfolio-default.jpg",
+    "slug": "hj",
+    "overview": "",
+    "role": "",
+    "tasks": [],
+    "achievements": [],
+    "challenges": [],
+    "solutions": [],
+    "technologies": [],
+    "liveUrl": "",
+    "githubUrl": "",
+    "createdAt": "2025-11-03T22:19:29.446Z",
+    "updatedAt": "2025-11-03T22:19:29.446Z"
   }
 ]

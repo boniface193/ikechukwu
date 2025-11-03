@@ -44,11 +44,11 @@ async function writeProjects(projects: Project[]): Promise<void> {
 }
 
 // GET single project by ID
-export async function GET(request: Request, { params }: { params: { id: string } }) {
+export async function GET(request: Request, { params }: { params: { id: string } }): Promise<NextResponse> {
   try {
 
     const projects: Project[] = await readProjects();
-    const { id } = await params;
+    const { id } = params;
     const project: Project | undefined = projects.find(p => p.id === parseInt(id));
 
     if (!project) {
