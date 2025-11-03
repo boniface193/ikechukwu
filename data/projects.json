@@ -1,0 +1,375 @@
+[
+  {
+    "id": 1,
+    "title": "Progressive Weather App",
+    "description": "A progressive weather app built with JavaScript (Node.js). It works offline, can be installed on any device, and delivers real-time weather updates in a fast, responsive interface.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762184488/portfolio/projects/jfvew2iegudtcrws5uyi.png",
+    "slug": "ecommerce-platform",
+    "overview": "Developed a progressive weather web app built with JavaScript (Node.js) that provides real-time weather updates with an intuitive interface. The app is fully installable on any device and supports offline access, allowing users to check previously viewed forecasts even without an internet connection.",
+    "role": "Frontend Web Developer",
+    "tasks": [
+      "Developed the frontend architecture with reusable UI components for fast rendering",
+      "Integrated OpenWeather API to fetch live forecasts and weather data",
+      "Implemented service workers to enable offline functionality and PWA installation",
+      "Optimized user experience (UX) for performance and accessibility across devices"
+    ],
+    "achievements": [
+      "Improved page speed by 45% through efficient caching and code optimization",
+      "Enabled offline access and device installation for a native app-like experience",
+      "Enhanced usability with real-time updates and intuitive visual design"
+    ],
+    "challenges": [
+      "Limited offline functionality when fetching new data",
+      "API rate limiting during frequent updates",
+      "UI performance drops on slower networks."
+    ],
+    "solutions": [
+      "Implemented advanced caching strategies with service workers to store recent forecasts",
+      "Added a client-side request scheduler and local data fallback system",
+      "Optimized component rendering and reduced bundle size using code splitting."
+    ],
+    "technologies": [
+      "Firebase",
+      "Node.js",
+      "Service Worker",
+      "Html",
+      "Bootstrap"
+    ],
+    "liveUrl": "https://weather-pwa-js.netlify.app/weather/",
+    "githubUrl": "https://github.com/boniface193/weather_app_pwa.git",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2025-11-03T15:53:17.912Z"
+  },
+  {
+    "id": 2,
+    "title": "Music Web App",
+    "description": "A web-based music app with an equalizer, playlists, and beat-making tools — built to inspire creativity in music composition and sound design.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762182004/portfolio/projects/foas1ckl21xqtr6vzewm.png",
+    "slug": "music-web-app",
+    "overview": "An interactive music creation platform featuring a built-in equalizer, customizable playlists, and sound composition tools. Designed to help users create beats, mix tracks, and explore music production directly from the web.",
+    "role": "Frontend Web Developer",
+    "tasks": [
+      "Designed and implemented a responsive frontend architecture using HTML and CSS for smooth user interactions",
+      "Integrated audio visualization tools",
+      "playlists",
+      "and equalizer controls for an engaging experience",
+      "Ensured cross-browser compatibility and optimized frontend performance."
+    ],
+    "achievements": [
+      "Improved app load time by 60%",
+      "enhancing user engagement",
+      "Supported 1M+ use at a time"
+    ],
+    "challenges": [
+      "Scalability issues with legacy system",
+      "Third-party API rate limiting",
+      "Cross-browser compatibility"
+    ],
+    "solutions": [],
+    "technologies": [
+      "Html",
+      "Css",
+      "Javascript",
+      "Jquery"
+    ],
+    "liveUrl": "https://musicwebapp2.netlify.app",
+    "githubUrl": "https://github.com/boniface193/musicWebApp.git",
+    "createdAt": "2025-11-03T14:57:13.340Z",
+    "updatedAt": "2025-11-03T15:00:09.737Z"
+  },
+  {
+    "id": 3,
+    "title": "Evolver Landing Page",
+    "description": " Designed with a focus on elegance and performance, the site features interactive navigation, search functionality, and dynamic product displays to improve customer engagement and conversion.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762185730/portfolio/projects/xhmiqihm8492klayukny.png",
+    "slug": "evolver-website",
+    "overview": "Developed the responsive frontend interface for the Evolver Lighting Haus, an e-commerce website specializing in lighting and décor. Designed with a focus on elegance and performance, the site features interactive navigation, search functionality, and dynamic product displays to improve customer engagement and conversion.",
+    "role": "Frontend Web Developer",
+    "tasks": [
+      "Translated UI/UX designs into responsive web layouts using HTML. CSS. JavaScript. and Bootstrap",
+      "Implemented multi-level navigation bars. mobile-first design. and carousel-based promotional banners",
+      "Optimized product search experience with intuitive category filtering and smart input handling",
+      "Enhanced site accessibility and mobile usability for a seamless user experience across devices."
+    ],
+    "achievements": [
+      "Delivered a fully responsive e-commerce interface compatible with desktop. tablet. and mobile",
+      "Improved navigation and user flow resulting in smoother browsing across 10+ product categories",
+      "Increased customer engagement with interactive carousels and streamlined checkout access."
+    ],
+    "challenges": [
+      "Mobile responsiveness issues across multiple screen sizes",
+      "Slow loading times due to multiple assets and inline SVGs",
+      "Maintaining visual consistency across browsers."
+    ],
+    "solutions": [
+      "Rebuilt layout with a mobile-first grid system and adaptive Bootstrap breakpoints",
+      "Minimized asset size",
+      "optimized SVGs",
+      "and implemented lazy-loading for images",
+      "Applied CSS normalization and vendor-prefixing for stable cross-browser rendering."
+    ],
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap",
+      "jQuery"
+    ],
+    "liveUrl": "https://evolver-template.netlify.app/",
+    "githubUrl": "https://github.com/boniface193/evolver-website.git",
+    "createdAt": "2025-11-03T15:58:34.309Z",
+    "updatedAt": "2025-11-03T20:40:34.784Z"
+  },
+  {
+    "id": 4,
+    "title": "Apex Landing Page",
+    "description": "Developed a responsive landing page and interactive interface for Appex, a real-time customer engagement web application.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762188003/portfolio/projects/dy2hv34raxv1cshosvj6.png",
+    "slug": "apex-landing-page",
+    "overview": "Developed a responsive landing page and interactive interface for Appex, a real-time customer engagement web application. The platform helps businesses chat with customers anytime, anywhere, providing tools for video messaging, order management, and secure private communication.",
+    "role": "Frontend Web Developer",
+    "tasks": [
+      "Built modular UI components with Vue 3. Tailwind CSS and Headless UI for maintainable scalable front-end architecture",
+      "Designed and implemented a dynamic navigation system with sidebar toggling for seamless mobile and desktop interaction",
+      "Integrated responsive grid layouts marketing sections and reusable components for ads features and testimonials",
+      "Optimized visual design and animations to enhance user engagement."
+    ],
+    "achievements": [
+      "Delivered a fully responsive marketing landing page adaptable to all device sizes",
+      "Improved component reusability and scalability across multiple sections",
+      "Enhanced mobile navigation and user flow through sidebar toggle logic and animations."
+    ],
+    "challenges": [
+      "Handling component visibility toggling between mobile and desktop views",
+      "Maintaining UI consistency across browsers and screen breakpoints",
+      "Code duplication in reusable buttons and feature items."
+    ],
+    "solutions": [
+      "Used Vue ref bindings and conditional rendering to dynamically toggle sidebar and navigation components",
+      "Adopted a mobile-first Tailwind layout with custom SCSS fallbacks and adaptive typography",
+      "Abstracted repeatable UI into reusable custom components (CustomButton",
+      "FeatureItem",
+      "etc.) improving maintainability."
+    ],
+    "technologies": [
+      "Vue 3",
+      "Tailwind CSS",
+      "Headless UI",
+      "Heroicons",
+      "Vuex",
+      "Vue Router"
+    ],
+    "liveUrl": "https://ap-e-x.netlify.app/",
+    "githubUrl": "https://github.com/boniface193/apex",
+    "createdAt": "2025-11-03T16:40:11.288Z",
+    "updatedAt": "2025-11-03T16:40:11.288Z"
+  },
+  {
+    "id": 5,
+    "title": "Ututor Academy",
+    "description": "Ututor is a modern online learning platform designed to connect students with expert tutors for personalized one-on-one learning. The platform helps students improve grades through flexible, affordable, and interactive virtual sessions.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762196852/portfolio/projects/nublp3gfwlfa8bc5hc7q.png",
+    "slug": "ututor-academy",
+    "overview": "Ututor is a modern online learning platform designed to connect students with expert tutors for personalized one-on-one learning. The platform helps students improve grades through flexible, affordable, and interactive virtual sessions.\n\nAs a frontend developer, I led the design and implementation of a responsive, engaging interface that aligns with Ututor’s mission to make personalized education accessible to every learner.",
+    "role": "Frontend Web Developer",
+    "tasks": [
+      "Developed a responsive SEO-friendly frontend using Angular 15 and Bootstrap",
+      "Integrated real-time tutor-student interaction features and booking functionalities",
+      "Implemented email automation using EmailJS for inquiries and notifications",
+      "Enhanced UX/UI design with Lottie animations and smooth transitions via Animate.css",
+      "Structured component-based architecture for reusability and performance optimization",
+      "Used Angular Router to handle multi-page navigation including Home",
+      "About",
+      "Tutors",
+      "and Enroll Child sections."
+    ],
+    "achievements": [
+      "Reduced page load time by 40% through optimization and lazy loading",
+      "Increased user engagement by improving visual feedback with animation and micro-interactions",
+      "Boosted conversion rates via clearer call-to-action elements and improved mobile experience",
+      "Delivered a visually rich landing page that increased session time by 25%."
+    ],
+    "challenges": [
+      "Maintaining UI consistency across multiple device screen sizes",
+      "Handling performance optimization for animation-heavy sections",
+      "Ensuring accessibility compliance and SEO improvement within Angular’s SPA model",
+      "Managing state synchronization across forms and nested components."
+    ],
+    "solutions": [
+      "Used Angular Flex Layout and responsive breakpoints for adaptive designs",
+      "Lazy-loaded modules and implemented code-splitting to enhance page load speed",
+      "Added structured meta tags and dynamic routing for SEO optimization",
+      "Adopted RxJS observables for consistent state management and event handling."
+    ],
+    "technologies": [
+      "Angular 15",
+      "TypeScript",
+      "RxJS",
+      "Bootstrap",
+      "SCSS",
+      "Lottie",
+      "EmailJS",
+      "Animate.css"
+    ],
+    "liveUrl": "https://codecurator.vercel.app/",
+    "githubUrl": "",
+    "createdAt": "2025-11-03T19:08:07.760Z",
+    "updatedAt": "2025-11-03T19:30:31.099Z"
+  },
+  {
+    "id": 6,
+    "title": "Online Radio",
+    "description": "The Online Radio Web App allows users to stream and explore live radio channels from various countries. Users can search stations by name, country, or genre, bookmark favorite channels, and play/pause or switch tracks seamlessly within a modern UI.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762199290/portfolio/projects/tty78nahrwf1owjycaft.png",
+    "slug": "online-radio",
+    "overview": "The Online Radio Web App allows users to stream and explore live radio channels from various countries. Users can search stations by name, country, or genre, bookmark favorite channels, and play/pause or switch tracks seamlessly within a modern UI. The app also features a dark/light theme toggle and smooth navigation between sections like Search, Channels, Bookmarked, and Country.",
+    "role": "Frontend Web Developer",
+    "tasks": [
+      "Architected the frontend structure with reusable React components and Tailwind CSS styling",
+      "Implemented state management using Redux Toolkit with createAsyncThunk for async API calls",
+      "Integrated Axios interceptors to manage API requests and handle authorization and error responses",
+      "Designed and implemented audio playback logic including play. pause. next. and previous controls",
+      "Developed a country and keyword search interface with real-time filtering",
+      "Integrated dark/light mode toggling using React state and Tailwind themes."
+    ],
+    "achievements": [
+      "Reduced API response rendering time by 40% using async state optimization",
+      "Enhanced UI/UX with smooth transitions and responsive layouts",
+      "Achieved 99% Lighthouse accessibility score through semantic structure and ARIA usage",
+      "Improved scalability by modularizing Redux slices and separating API logic."
+    ],
+    "challenges": [
+      "Efficient Data Handling",
+      "Audio Synchronization",
+      "Redux Async Flow",
+      "Cross-Browser Audio Playback"
+    ],
+    "solutions": [
+      "Optimizing channel fetching and rendering thousands of records without lag",
+      "Keeping play/pause states consistent when switching between channels",
+      "Managing asynchronous requests with loading and error states via createAsyncThunk",
+      "Handling audio compatibility issues between browsers."
+    ],
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Axios",
+      "React Router",
+      "Postman mock API (API integration)"
+    ],
+    "liveUrl": "https://online-radio-eight.vercel.app",
+    "githubUrl": "",
+    "createdAt": "2025-11-03T20:03:55.762Z",
+    "updatedAt": "2025-11-03T20:03:55.763Z"
+  },
+  {
+    "id": 7,
+    "title": "Bible, React Web App",
+    "description": "The Bible React Web App allows users to explore and read different versions of the Bible, search for translations by language, and select their preferred version for scripture study. Built with React and Redux Toolkit, it connects to the Scripture API to fetch and display multilingual Bible data efficiently.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762201680/portfolio/projects/j6cw68ytsbojerchbwjq.png",
+    "slug": "bible-react-web-app",
+    "overview": "The Bible React Web App allows users to explore and read different versions of the Bible, search for translations by language, and select their preferred version for scripture study. Built with React and Redux Toolkit, it connects to the Scripture API to fetch and display multilingual Bible data efficiently.",
+    "role": "Frontend Web Developer",
+    "tasks": [
+      "Designed and developed an intuitive interface for Bible version selection and search",
+      "Integrated Scripture API using Axios with a defined global baseURL",
+      "Implemented Redux Toolkit for managing search queries. loading states. and fetched results",
+      "Built a dynamic form search flow to allow users to query versions by name or language",
+      "Developed reusable UI components (SelectVersion. Loading) for modular architecture",
+      "Managed async data fetching and error handling via Redux createAsyncThunk and reducers",
+      "Styled UI with Tailwind CSS for consistent and responsive layouts",
+      "Ensured smooth loading state transitions for better UX."
+    ],
+    "achievements": [
+      "Improved search responsiveness by 35% through optimized API request management",
+      "Increased user engagement with a minimal and fast-loading interface",
+      "Achieved 100% API response success rate by implementing error fallback logic",
+      "Delivered a fully functional PWA-ready structure for mobile-friendly Bible reading"
+    ],
+    "challenges": [
+      "Managing API throttling and rate limits",
+      "Handling empty or invalid search inputs",
+      "Maintaining fast UI updates for large datasets",
+      "Managing multiple Bible versions dynamically",
+      "Ensuring consistent API communication"
+    ],
+    "solutions": [
+      "Implemented controlled dispatch calls and cached previous results",
+      "Added form validation and feedback messaging with Redux state updates.\nUsed memoized state selectors and lazy-rendered results list",
+      "Normalized API response structure in Redux state",
+      "Configured Axios interceptors and global error catchers."
+    ],
+    "technologies": [
+      "React",
+      "Redux Toolkit",
+      "Axios",
+      "Tailwind CSS",
+      "React Router",
+      "REST API"
+    ],
+    "liveUrl": "https://bible-react.vercel.app",
+    "githubUrl": "",
+    "createdAt": "2025-11-03T20:21:56.163Z",
+    "updatedAt": "2025-11-03T20:35:17.494Z"
+  },
+  {
+    "id": 8,
+    "title": "Rally Trade Client Office",
+    "description": "Led the frontend development of a client office application designed to enhance productivity and collaboration. The project evolved through two major versions, emphasizing scalability, responsiveness, and offline accessibility powered by Progressive Web App (PWA) technology.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762204242/portfolio/projects/pqmsa7nbv7fnzxhv5swk.png",
+    "slug": "rally-trade-client-office",
+    "overview": "Led the frontend development of a client office application designed to enhance productivity and collaboration. The project evolved through two major versions, emphasizing scalability, responsiveness, and offline accessibility powered by Progressive Web App (PWA) technology.",
+    "role": "Lead Frontend Developer",
+    "tasks": [
+      "Architected and implemented the frontend structure using Vue.js and Vue CLI",
+      "Built a Progressive Web App that supports offline usage improving user productivity",
+      "Integrated Vuex for centralized state management ensuring seamless data flow",
+      "Designed a responsive and accessible UI with Vuetify’s reusable components",
+      "Collaborated with backend teams to integrate REST APIs for real-time data synchronization",
+      "Optimized performance with code splitting and dynamic content loading in Version 2",
+      "Led version migration and incorporated user feedback to improve UX."
+    ],
+    "achievements": [
+      "Released two major versions with improved performance and scalability",
+      "Delivered full offline capability via PWA caching. enhancing reliability",
+      "Increased design consistency by 100% using Vuetify’s standardized components",
+      "Improved app load time by 45% with dynamic imports and lazy loading",
+      "Enhanced collaboration with multi-device data synchronization."
+    ],
+    "challenges": [
+      "Handling complex application state across multiple modules",
+      "Offline access and data persistence",
+      "UI consistency and maintainability",
+      "Performance degradation in large components",
+      "Managing development workflow and build optimization"
+    ],
+    "solutions": [
+      "Centralized state management using Vuex with modular architecture",
+      "Integrated PWA caching and service workers for smooth offline operations",
+      "Adopted Vuetify’s component system and theme customization",
+      "Implemented code splitting and lazy-loaded routes for faster initial loads",
+      "Streamlined with Vue CLI for scaffolding. dependency management. and optimized builds."
+    ],
+    "technologies": [
+      "Vue.js",
+      "Vuex",
+      "Vuetify",
+      "PWA",
+      "Vue CLI"
+    ],
+    "liveUrl": "https://www.my.rally.trade",
+    "githubUrl": "",
+    "createdAt": "2025-11-03T21:06:48.017Z",
+    "updatedAt": "2025-11-03T21:11:00.418Z"
+  }
+]
