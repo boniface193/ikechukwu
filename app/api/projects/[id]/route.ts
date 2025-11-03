@@ -44,11 +44,11 @@ async function writeProjects(projects: Project[]): Promise<void> {
 }
 
 // GET single project by ID
-export async function GET(request: Request, context: { params: { id: string } }) {
+export async function GET(request: Request, { params }: { params: { id: string } }) {
   try {
 
     const projects: Project[] = await readProjects();
-    const { id } = params;
+    const { id } = await params;
     const project: Project | undefined = projects.find(p => p.id === parseInt(id));
 
     if (!project) {
@@ -68,11 +68,11 @@ export async function GET(request: Request, context: { params: { id: string } })
 }
 
 // PUT update project
-export async function PUT(request: Request, context: { params: { id: string } }) {
+export async function PUT(request: Request, { params }: { params: { id: string } }): Promise<NextResponse> {
   try {
     const updateData: Partial<Project> = await request.json();
     const projects: Project[] = await readProjects();
-    const { id } = params;
+    const { id } = await params;
     const projectIndex: number = projects.findIndex(p => p.id === parseInt(id));
 
     if (projectIndex === -1) {
@@ -117,10 +117,10 @@ export async function PUT(request: Request, context: { params: { id: string } })
 }
 
 // DELETE project
-export async function DELETE(request: Request, context: { params: { id: string } }) {
+export async function DELETE(request: Request, { params }: { params: { id: string } }): Promise<NextResponse> {
   try {
     const projects: Project[] = await readProjects();
-    const { id } = params;
+    const { id } = await params;
     const projectIndex: number = projects.findIndex(p => p.id === parseInt(id));
 
     if (projectIndex === -1) {
