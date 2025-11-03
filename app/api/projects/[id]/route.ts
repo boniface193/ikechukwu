@@ -44,7 +44,7 @@ async function writeProjects(projects: Project[]): Promise<void> {
 }
 
 // GET single project by ID
-export async function GET(request: Request, { params }: { params: { id: string } }): Promise<NextResponse> {
+export async function GET(request: Request, { params: { id } }: { params: { id: string } }): Promise<NextResponse> {
   try {
 
     const projects: Project[] = await readProjects();
@@ -68,7 +68,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
 }
 
 // PUT update project
-export async function PUT(request: Request, { params }: { params: { id: string } }): Promise<NextResponse> {
+export async function PUT(request: Request, { params: { id } }: { params: { id: string } }): Promise<NextResponse> {
   try {
     const updateData: Partial<Project> = await request.json();
     const projects: Project[] = await readProjects();
@@ -117,7 +117,7 @@ export async function PUT(request: Request, { params }: { params: { id: string }
 }
 
 // DELETE project
-export async function DELETE(request: Request, { params }: { params: { id: string } }): Promise<NextResponse> {
+export async function DELETE(request: Request, { params: { id } }: { params: { id: string } }): Promise<NextResponse> {
   try {
     const projects: Project[] = await readProjects();
     const { id } = await params;
