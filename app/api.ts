@@ -52,12 +52,12 @@ export const projectService = {
   },
 
   // Delete project
-  async deleteExistingProject(formData: FormData) {
+  async deleteExistingProject(imageUrl: string): Promise<void>  {
     // Get the image URL from formData using .get() method
-    const imageUrl = formData.get('image') as string;
-    if (!imageUrl) {
-      throw new Error('No image URL provided for deletion');
+    if (!imageUrl || !imageUrl.includes('cloudinary')) {
+      throw new Error('No Cloudinary image to delete');
     }
+    
     const response = await fetch(`/api/images?url=${encodeURIComponent(imageUrl)}`, {
       method: 'DELETE',
     });
