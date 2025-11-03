@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { deleteImage, getPublicIdFromUrl } from '@/lib/cloudinary';
 
 // DELETE specific image
-export async function DELETE(request: { url: string | URL; }) {
+export async function DELETE(request: Request): Promise<NextResponse> {
   try {
     const { searchParams } = new URL(request.url);
     const imageUrl = searchParams.get('url');
