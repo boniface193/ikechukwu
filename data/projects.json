@@ -371,24 +371,5 @@
     "githubUrl": "",
     "createdAt": "2025-11-03T21:06:48.017Z",
     "updatedAt": "2025-11-03T21:11:00.418Z"
-  },
-  {
-    "id": 9,
-    "title": "man o war",
-    "description": "none the less",
-    "category": "Full Stack",
-    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762209420/portfolio/projects/nbdjtv8ls8yorcjcvgmz.png",
-    "slug": "man-o-war",
-    "overview": "",
-    "role": "",
-    "tasks": [],
-    "achievements": [],
-    "challenges": [],
-    "solutions": [],
-    "technologies": [],
-    "liveUrl": "",
-    "githubUrl": "",
-    "createdAt": "2025-11-03T22:37:08.090Z",
-    "updatedAt": "2025-11-03T22:37:08.090Z"
   }
 ]

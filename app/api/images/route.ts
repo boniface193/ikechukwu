@@ -35,7 +35,7 @@ export async function DELETE(request: Request): Promise<NextResponse> {
   } catch (error) {
     console.error('Image deletion error:', error);
     return NextResponse.json(
-      { error: 'Failed to delete image: ' + error.message },
+      { error: 'Failed to delete image: ' + (error as Error).message },
       { status: 500 }
     );
   }
