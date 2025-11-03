@@ -54,7 +54,7 @@ export default function ProjectForm({
 
   const [uploading, setUploading] = useState(false);
   const [previewUrl, setPreviewUrl] = useState(project?.image || '');
-  const fileInputRef = useRef<HTMLInputElement>(null); // Added proper type
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   if (!isAdminEnabled) return null;
 
@@ -82,12 +82,12 @@ export default function ProjectForm({
     solutions: string[];
   }
 
-  // Handle image upload - FIXED TYPE
+  // Handle image upload
   const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (!files || files.length === 0) return;
 
-    const file = files[0]; // This is now correctly typed
+    const file = files[0];
     if (!file) return;
 
     // Validate file type
@@ -105,10 +105,23 @@ export default function ProjectForm({
     setUploading(true);
 
     try {
-      const formData = new FormData();
-      formData.append('image', file);
+      // If there's an existing Cloudinary image, delete it first
+      if (formData.image && formData.image.includes('cloudinary')) {
+        try {
+          await projectService.deleteExistingProject(formData.image);
+          console.log('Old image deleted successfully');
+        } catch (error) {
+          console.error('Error deleting old image:', error);
+          // Continue with upload even if deletion fails
+        }
+      }
 
-      const result = await projectService.uploadToCloudinary(formData);
+      // Create FormData for the new upload
+      const uploadFormData = new FormData();
+      uploadFormData.append('image', file);
+
+      // Upload new image
+      const result = await projectService.uploadToCloudinary(uploadFormData);
 
       // Update form data with Cloudinary URL
       setFormData(prev => ({
@@ -125,12 +138,12 @@ export default function ProjectForm({
     }
   };
 
-  // Remove image - FIXED to handle potential undefined
-  const handleRemoveImage = async() => {
+  // Remove image
+  const handleRemoveImage = async () => {
     // If there's an existing image from Cloudinary, delete it
     if (formData.image && formData.image.includes('cloudinary')) {
       try {
-        projectService.deleteExistingProject(formData?.image);
+        await projectService.deleteExistingProject(formData.image);
         console.log('Old image deleted successfully');
       } catch (error) {
         console.error('Error deleting old image:', error);
@@ -138,14 +151,7 @@ export default function ProjectForm({
       }
     }
 
-    // Create FormData for the new upload
-    const uploadFormData = new FormData();
-    uploadFormData.append('image', file);
-
-    // Upload new image
-    const result = await projectService.uploadToCloudinary(uploadFormData);
-
-    setFormData(prev => ({ ...prev, image: result.imageUrl }));
+    setFormData(prev => ({ ...prev, image: '' }));
     setPreviewUrl('');
     if (fileInputRef.current) {
       fileInputRef.current.value = '';

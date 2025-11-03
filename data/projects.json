@@ -374,11 +374,11 @@
   },
   {
     "id": 9,
-    "title": "next",
-    "description": "jf",
+    "title": "dancer",
+    "description": "dhdbd",
     "category": "Full Stack",
-    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762210816/portfolio/projects/bhpoykvplxuohyu9gjus.png",
-    "slug": "next",
+    "image": "/portfolio-default.jpg",
+    "slug": "dancer",
     "overview": "",
     "role": "",
     "tasks": [],
@@ -388,7 +388,7 @@
     "technologies": [],
     "liveUrl": "",
     "githubUrl": "",
-    "createdAt": "2025-11-03T22:51:50.613Z",
-    "updatedAt": "2025-11-03T23:00:21.954Z"
+    "createdAt": "2025-11-03T23:10:47.770Z",
+    "updatedAt": "2025-11-03T23:10:47.770Z"
   }
 ]
