@@ -68,11 +68,11 @@ export async function GET(request: Request, { params }: { params: { id: string }
 }
 
 // PUT update project
-export async function PUT(request: Request, { params: { id } }: { params: { id: string } }): Promise<NextResponse> {
+export async function PUT(request: Request, { params }: { params: { id: string } }) {
   try {
     const updateData: Partial<Project> = await request.json();
     const projects: Project[] = await readProjects();
-    const { id } = await params;
+    const { id } = params;
     const projectIndex: number = projects.findIndex(p => p.id === parseInt(id));
 
     if (projectIndex === -1) {
@@ -117,10 +117,10 @@ export async function PUT(request: Request, { params: { id } }: { params: { id: 
 }
 
 // DELETE project
-export async function DELETE(request: Request, { params: { id } }: { params: { id: string } }): Promise<NextResponse> {
+export async function DELETE(request: Request, { params }: { params: { id: string } }) {
   try {
     const projects: Project[] = await readProjects();
-    const { id } = await params;
+    const { id } = params;
     const projectIndex: number = projects.findIndex(p => p.id === parseInt(id));
 
     if (projectIndex === -1) {

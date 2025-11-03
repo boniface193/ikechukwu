@@ -120,9 +120,9 @@ export default function PortfolioPage() {
                 >
                   Let&apos;s discuss your project
                 </a>
-                <button className="border border-purple-600 text-purple-600 px-8 py-3 cursor-pointer rounded-lg hover:bg-purple-600 hover:text-white transition-all font-medium">
+                <a href='/ikechukwu_frontend.pdf' target='_blank' download={'ikechukwu_frontend.pdf'} className="border border-purple-600 text-purple-600 px-8 py-3 cursor-pointer rounded-lg hover:bg-purple-600 hover:text-white transition-all font-medium">
                   Download Resume
-                </button>
+                </a>
               </div>
             </div>
 
