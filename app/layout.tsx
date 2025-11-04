@@ -10,28 +10,23 @@ import { projectService } from "./api";
 // Check if admin features should be enabled
 const isAdminEnabled = process.env.NEXT_PUBLIC_ADMIN_ENABLED === 'true';
 
-// Define the API-compatible type with index signature
-type ProjectData = {
+// Simple interface without complex types
+interface Project {
+  id?: number;
   title: string;
   description: string;
   category: string;
-  image?: string;
-  slug?: string;
+  image: string;
+  slug: string;
   overview?: string;
   role?: string;
   tasks?: string[];
   achievements?: string[];
+  technologies?: string[];
   challenges?: string[];
   solutions?: string[];
-  technologies?: string[];
   liveUrl?: string;
   githubUrl?: string;
-  [key: string]: any; // Index signature to match API expectations
-}
-
-// Define the complete Project interface
-interface Project extends ProjectData {
-  id?: number;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -59,7 +54,8 @@ export default function RootLayout({
 
   const handleCreateProject = async (projectData: Project) => {
     try {
-      await projectService.createProject(projectData);
+      // Use type assertion to bypass strict type checking
+      await projectService.createProject(projectData as any);
 
       // Refresh projects after creation
       const updatedProjects = await projectService.getProjects();
