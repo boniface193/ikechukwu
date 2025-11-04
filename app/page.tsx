@@ -9,6 +9,7 @@ import { projectService } from './api';
 import ProjectForm from './components/forms';
 import WorkProcess from './components/WorkProcess';
 import TechStack from './components/TechStack';
+import { Project } from '@/types/project';
 
 // Check if admin features should be enabled
 const isAdminEnabled = process.env.NEXT_PUBLIC_ADMIN_ENABLED === 'true';
@@ -36,15 +37,6 @@ export default function PortfolioPage() {
   };
 
   // Project type used across this component
-  interface Project {
-    id?: string;
-    slug?: string;
-    title: string;
-    description?: string;
-    image?: string;
-    category?: string;
-  }
-
   const currentYear = new Date().getFullYear(); // Get the current year
   const startingYear = 2019; // Starting year (or whatever you want)
   const yearsPassed = currentYear - startingYear;
