@@ -47,6 +47,7 @@ interface ProjectData {
   liveUrl?: string;
   githubUrl?: string;
   slug?: string;
+  [key: string]: unknown; // Add index signature
 }
 
 
