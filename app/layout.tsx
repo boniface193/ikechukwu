@@ -10,47 +10,27 @@ import { projectService } from "./api";
 // Check if admin features should be enabled
 const isAdminEnabled = process.env.NEXT_PUBLIC_ADMIN_ENABLED === 'true';
 
-// Use a more flexible interface that matches the API
-interface Project {
-  id?: number;
-  title: string;
-  description: string;
-  category: string;
-  image: string;
-  slug: string;
-  overview?: string;
-  role?: string;
-  tasks?: string[];
-  achievements?: string[];
-  technologies?: string[];
-  challenges?: string[];
-  solutions?: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  createdAt?: string;
-  updatedAt?: string;
-}
-
-// Use a type with index signature to match API expectations
+// Define the API-compatible type with index signature
 type ProjectData = {
   title: string;
   description: string;
   category: string;
   image?: string;
+  slug?: string;
   overview?: string;
   role?: string;
   tasks?: string[];
   achievements?: string[];
-  technologies?: string[];
   challenges?: string[];
   solutions?: string[];
+  technologies?: string[];
   liveUrl?: string;
   githubUrl?: string;
-  slug?: string;
-  [key: string]: unknown; // Add index signature
+  [key: string]: any; // Index signature to match API expectations
 }
 
-interface Project extends APIProjectData {
+// Define the complete Project interface
+interface Project extends ProjectData {
   id?: number;
   createdAt?: string;
   updatedAt?: string;
@@ -79,8 +59,7 @@ export default function RootLayout({
 
   const handleCreateProject = async (projectData: Project) => {
     try {
-      // Type assertion to match API expectations
-      await projectService.createProject(projectData as APIProjectData);
+      await projectService.createProject(projectData);
 
       // Refresh projects after creation
       const updatedProjects = await projectService.getProjects();
@@ -88,7 +67,7 @@ export default function RootLayout({
       setShowProjectForm(false);
     } catch (error) {
       console.error('Error creating project:', error);
-    }      
+    }
   };
 
   return (
