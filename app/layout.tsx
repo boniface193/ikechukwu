@@ -10,7 +10,7 @@ import { projectService } from "./api";
 // Check if admin features should be enabled
 const isAdminEnabled = process.env.NEXT_PUBLIC_ADMIN_ENABLED === 'true';
 
-// Define the complete Project interface
+// Use a more flexible interface that matches the API
 interface Project {
   id?: number;
   title: string;
@@ -31,8 +31,8 @@ interface Project {
   updatedAt?: string;
 }
 
-// Define the data needed to create a new project (matches what the API expects)
-interface ProjectData {
+// Use a type with index signature to match API expectations
+type ProjectData = {
   title: string;
   description: string;
   category: string;
@@ -47,9 +47,8 @@ interface ProjectData {
   liveUrl?: string;
   githubUrl?: string;
   slug?: string;
-  [key: string]: unknown; // Add index signature
+  [key: string]: any; // Add index signature
 }
-
 
 export default function RootLayout({
   children,
@@ -72,11 +71,9 @@ export default function RootLayout({
     fetchProjects();
   }, []);
 
-  // Payload for creating a new project (id is assigned by backend)
   const handleCreateProject = async (projectData: Project) => {
     try {
-
-      // Convert to the expected API type
+      // Create a clean object with only the fields the API needs
       const apiProjectData: ProjectData = {
         title: projectData.title,
         description: projectData.description,
@@ -94,8 +91,8 @@ export default function RootLayout({
         slug: projectData.slug
       };
 
-
       await projectService.createProject(apiProjectData);
+
       // Refresh projects after creation
       const updatedProjects = await projectService.getProjects();
       setProjects(updatedProjects);
