@@ -52,7 +52,7 @@ export default function PortfolioPage() {
     setEditingProject(null);
   };
 
-  const handleDeleteProject = async (projectId?: string): Promise<void> => {
+  const handleDeleteProject = async (projectId?: number): Promise<void> => {
     if (!projectId) {
       alert('Project id is missing');
       return;

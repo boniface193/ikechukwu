@@ -30,7 +30,7 @@ export const projectService = {
   },
 
   // Update project
-  async updateProject(id: string, projectData: Project) {
+  async updateProject(id: number, projectData: Project) {
     const response = await fetch(`/api/projects/${id}`, {
       method: 'PUT',
       headers: {
@@ -43,7 +43,7 @@ export const projectService = {
   },
 
   // Delete project
-  async deleteProject(id: string) {
+  async deleteProject(id: number) {
     const response = await fetch(`/api/projects/${id}`, {
       method: 'DELETE',
     });
