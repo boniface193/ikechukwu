@@ -89,7 +89,7 @@ export default function RootLayout({
                       {projects.map((project) => (
                         <li key={project.id}>
                           <Link
-                            href={`/projects/${project.slug}`}
+                            href={`/projects/${project.id}?id=${project.slug}`}
                             className="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors"
                           >
                             {project.title}
@@ -129,7 +129,7 @@ export default function RootLayout({
                     {projects.map((project) => (
                       <Link
                         key={project.id}
-                        href={`/projects/${project.slug}`}
+                        href={`/projects/${project.id}?id=${project.slug}`}
                         className="block px-2 py-1 text-gray-600 hover:text-purple-700 transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
