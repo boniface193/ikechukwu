@@ -374,11 +374,11 @@
   },
   {
     "id": 9,
-    "title": "dancer",
-    "description": "dhdbd",
+    "title": "Ikechukwu",
+    "description": "hello",
     "category": "Full Stack",
-    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762211969/portfolio/projects/tc3sx8vomizfyxnet9hc.png",
-    "slug": "dancer",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762245349/portfolio/projects/cqxrhvkq98ecf24devje.png",
+    "slug": "ikechukwu",
     "overview": "",
     "role": "",
     "tasks": [],
@@ -388,7 +388,7 @@
     "technologies": [],
     "liveUrl": "",
     "githubUrl": "",
-    "createdAt": "2025-11-03T23:10:47.770Z",
-    "updatedAt": "2025-11-03T23:19:35.305Z"
+    "createdAt": "2025-11-04T08:36:06.097Z",
+    "updatedAt": "2025-11-04T08:36:06.097Z"
   }
 ]
