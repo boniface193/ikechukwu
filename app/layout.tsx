@@ -35,7 +35,7 @@ export default function RootLayout({
   const handleCreateProject = async (projectData: Project) => {
     try {
       // Use type assertion to bypass strict type checking
-      await projectService.createProject(projectData);
+      await projectService.createProject(projectData as unknown as Record<string, unknown>);
 
       // Refresh projects after creation
       const updatedProjects = await projectService.getProjects();

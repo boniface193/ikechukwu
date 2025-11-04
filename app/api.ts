@@ -1,5 +1,5 @@
 // API service functions
-export type ProjectData = Record<string, unknown>;
+export type Project = Record<string, unknown>;
 
 export const projectService = {
   // Get all projects
@@ -17,7 +17,7 @@ export const projectService = {
   },
 
   // Create new project
-  async createProject(projectData: ProjectData) {
+  async createProject(projectData: Project) {
     const response = await fetch('/api/projects', {
       method: 'POST',
       headers: {
@@ -57,7 +57,7 @@ export const projectService = {
     if (!imageUrl || !imageUrl.includes('cloudinary')) {
       throw new Error('No Cloudinary image to delete');
     }
-    
+
     const response = await fetch(`/api/images?url=${encodeURIComponent(imageUrl)}`, {
       method: 'DELETE',
     });
