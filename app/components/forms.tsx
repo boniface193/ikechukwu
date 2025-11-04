@@ -3,24 +3,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { projectService } from "../api";
-
-// Project form component
-interface Project {
-  title?: string;
-  description?: string;
-  category?: string;
-  image?: string;
-  overview?: string;
-  role?: string;
-  tasks?: string[];
-  achievements?: string[];
-  technologies?: string[];
-  challenges?: string[];
-  solutions?: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  slug?: string;
-}
+import { Project } from "@/types/project";
 
 // Check if admin features should be enabled
 const isAdminEnabled = process.env.NEXT_PUBLIC_ADMIN_ENABLED === 'true';
@@ -58,30 +41,6 @@ export default function ProjectForm({
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   if (!isAdminEnabled) return null;
-
-  interface FormDataType {
-    title: string;
-    description: string;
-    category: string;
-    image: string;
-    overview: string;
-    role: string;
-    tasks: string;
-    achievements: string;
-    technologies: string;
-    challenges: string;
-    solutions: string;
-    liveUrl: string;
-    githubUrl: string;
-  }
-
-  interface ProjectDataType extends Omit<FormDataType, 'tasks' | 'achievements' | 'technologies' | 'challenges' | 'solutions'> {
-    tasks: string[];
-    achievements: string[];
-    technologies: string[];
-    challenges: string[];
-    solutions: string[];
-  }
 
   // Handle image upload
   const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -162,13 +121,21 @@ export default function ProjectForm({
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     try {
-      const projectData: ProjectDataType = {
-        ...formData,
+      const projectData: Project = {
+        title: formData.title,
+        description: formData.description,
+        category: formData.category,
+        image: formData.image,
+        slug: formData.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'), // Generate slug from title
+        overview: formData.overview,
+        role: formData.role,
         tasks: formData.tasks.split(',').map(task => task.trim()).filter(task => task),
         achievements: formData.achievements.split(',').map(achievement => achievement.trim()).filter(achievement => achievement),
         technologies: formData.technologies.split(',').map(tech => tech.trim()).filter(tech => tech),
         challenges: formData.challenges.split(',').map(challenge => challenge.trim()).filter(challenge => challenge),
-        solutions: formData.solutions.split(',').map(solution => solution.trim()).filter(solution => solution)
+        solutions: formData.solutions.split(',').map(solution => solution.trim()).filter(solution => solution),
+        liveUrl: formData.liveUrl,
+        githubUrl: formData.githubUrl
       };
 
       await onSave(projectData);
