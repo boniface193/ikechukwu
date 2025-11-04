@@ -31,6 +31,25 @@ interface Project {
   updatedAt?: string;
 }
 
+// Define the data needed to create a new project (matches what the API expects)
+interface ProjectData {
+  title: string;
+  description: string;
+  category: string;
+  image?: string;
+  overview?: string;
+  role?: string;
+  tasks?: string[];
+  achievements?: string[];
+  technologies?: string[];
+  challenges?: string[];
+  solutions?: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  slug?: string;
+}
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,7 +74,27 @@ export default function RootLayout({
   // Payload for creating a new project (id is assigned by backend)
   const handleCreateProject = async (projectData: Project) => {
     try {
-      await projectService.createProject(projectData);
+
+      // Convert to the expected API type
+      const apiProjectData: ProjectData = {
+        title: projectData.title,
+        description: projectData.description,
+        category: projectData.category,
+        image: projectData.image,
+        overview: projectData.overview,
+        role: projectData.role,
+        tasks: projectData.tasks,
+        achievements: projectData.achievements,
+        technologies: projectData.technologies,
+        challenges: projectData.challenges,
+        solutions: projectData.solutions,
+        liveUrl: projectData.liveUrl,
+        githubUrl: projectData.githubUrl,
+        slug: projectData.slug
+      };
+
+
+      await projectService.createProject(apiProjectData);
       // Refresh projects after creation
       const updatedProjects = await projectService.getProjects();
       setProjects(updatedProjects);
