@@ -371,5 +371,94 @@
     "githubUrl": "",
     "createdAt": "2025-11-03T21:06:48.017Z",
     "updatedAt": "2025-11-03T21:11:00.418Z"
+  },
+  {
+    "id": 9,
+    "title": "Relasto Properties",
+    "description": "The Relasto-Furniture project is a React-based real estate e-commerce web application designed to showcase properties, team members, and business insights. It integrates a modern UI, modular components, Google OAuth, and Tailwind styling support through Vite for optimized speed.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762258769/portfolio/projects/watenl11dkwmmb3w9ajh.png",
+    "slug": "relasto-properties",
+    "overview": "The Relasto-Furniture project is a React-based real estate e-commerce web application designed to showcase properties, team members, and business insights. It integrates a modern UI, modular components, Google OAuth, and Tailwind styling support through Vite for optimized speed.",
+    "role": "Lead Frontend Developer",
+    "tasks": [
+      "Configured project using Vite build pipeline for optimized bundle performance",
+      "Integrated TypeScript typings and environment variables via dotenv",
+      "Built reusable UI components (e.g. LandingPageHeader. LandingPageFooter. Text. List. Button)",
+      "Google OAuth via @react-oauth/google",
+      "Google Maps wrapper via @googlemaps/react-wrapper."
+    ],
+    "achievements": [
+      "Improved page load performance by 30% through image + bundle optimization",
+      "Reduced component duplication by 50% using shared UI primitives",
+      "Achieved consistent UI rendering across all breakpoints",
+      "Faster local development using Vite hot reload",
+      "Better SEO structure and conversion-optimized content layout."
+    ],
+    "challenges": [
+      "Image Optimization",
+      "Google OAuth Integration",
+      "Performance Under Vite"
+    ],
+    "solutions": [
+      "Team images + hero assets were heavy and slowed page load",
+      "Token & session persistence edge cases",
+      "Third-party packages not optimized by default"
+    ],
+    "technologies": [
+      "React 17",
+      "Vite",
+      "TailwindCSS",
+      "@react-oauth/google",
+      "TypeScript @types support"
+    ],
+    "liveUrl": "https://relasco-furniture.vercel.app/",
+    "githubUrl": "",
+    "createdAt": "2025-11-04T12:19:48.612Z",
+    "updatedAt": "2025-11-04T12:19:48.612Z"
+  },
+  {
+    "id": 10,
+    "title": "Rally Partners Promotional Landing Page",
+    "description": "This project is a Nuxt 3-powered landing and onboarding application designed to showcase product value, drive user engagement, and convert visitors through an integrated registration flow. It features multiple dynamic sections, reusable components, responsive styling, and lightweight state management to support a smooth referral-based user journey.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762259108/portfolio/projects/ibt1kqefjqdsut5dgkom.png",
+    "slug": "rally-partners-promotional-landing-page",
+    "overview": "This project is a Nuxt 3-powered landing and onboarding application designed to showcase product value, drive user engagement, and convert visitors through an integrated registration flow. It features multiple dynamic sections, reusable components, responsive styling, and lightweight state management to support a smooth referral-based user journey.\n\nThe landing page presents product benefits, reward tiers, and guided onboarding steps, leading users to register through a modal-based CTA process. Data flow is handled via Pinia store, while UI elements incorporate Bootstrap styling and reusable SVG-based components. The application is fully responsive, SEO-aware, and optimized for future scalability.",
+    "role": "Lead Frontend Developer",
+    "tasks": [
+      "Reconverted the initial website from static html to a new Nuxt 3 project",
+      "Configure project scripts (dev. start. generate. postinstall)\n\nInstall required packages & plugins: including Pinia"
+    ],
+    "achievements": [
+      "I was able to rewrite the whole promotional website to nuxt",
+      "and added Googgle Tag manager",
+      "i pushed to production",
+      "This Nuxt application creates a clear contextual flow from product awareness → education → signup. It showcases features",
+      "communicates reward incentives",
+      "and funnels users into the registration pathway",
+      "all within a polished",
+      "responsive",
+      "and maintainable codebase."
+    ],
+    "challenges": [
+      "Large Inline SVGs",
+      "Repeated card patterns make maintenance hard"
+    ],
+    "solutions": [
+      "Convert to components",
+      "Use array-driven loops (v-for)"
+    ],
+    "technologies": [
+      "Nuxt js",
+      "@pinia/nuxt",
+      "bootstrap",
+      "font-awesome",
+      "js-cookie"
+    ],
+    "liveUrl": "https://lp.rally.trade/",
+    "githubUrl": "",
+    "createdAt": "2025-11-04T12:34:06.033Z",
+    "updatedAt": "2025-11-04T12:34:06.033Z"
   }
 ]
