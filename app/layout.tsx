@@ -47,7 +47,13 @@ type ProjectData = {
   liveUrl?: string;
   githubUrl?: string;
   slug?: string;
-  [key: string]: any; // Add index signature
+  [key: string]: unknown; // Add index signature
+}
+
+interface Project extends APIProjectData {
+  id?: number;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export default function RootLayout({
@@ -73,25 +79,8 @@ export default function RootLayout({
 
   const handleCreateProject = async (projectData: Project) => {
     try {
-      // Create a clean object with only the fields the API needs
-      const apiProjectData: ProjectData = {
-        title: projectData.title,
-        description: projectData.description,
-        category: projectData.category,
-        image: projectData.image,
-        overview: projectData.overview,
-        role: projectData.role,
-        tasks: projectData.tasks,
-        achievements: projectData.achievements,
-        technologies: projectData.technologies,
-        challenges: projectData.challenges,
-        solutions: projectData.solutions,
-        liveUrl: projectData.liveUrl,
-        githubUrl: projectData.githubUrl,
-        slug: projectData.slug
-      };
-
-      await projectService.createProject(apiProjectData);
+      // Type assertion to match API expectations
+      await projectService.createProject(projectData as APIProjectData);
 
       // Refresh projects after creation
       const updatedProjects = await projectService.getProjects();
@@ -99,7 +88,7 @@ export default function RootLayout({
       setShowProjectForm(false);
     } catch (error) {
       console.error('Error creating project:', error);
-    }
+    }      
   };
 
   return (
