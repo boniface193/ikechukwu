@@ -371,43 +371,5 @@
     "githubUrl": "",
     "createdAt": "2025-11-03T21:06:48.017Z",
     "updatedAt": "2025-11-03T21:11:00.418Z"
-  },
-  {
-    "id": 9,
-    "title": "Ikechukwu",
-    "description": "hello",
-    "category": "Full Stack",
-    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762245349/portfolio/projects/cqxrhvkq98ecf24devje.png",
-    "slug": "ikechukwu",
-    "overview": "",
-    "role": "",
-    "tasks": [],
-    "achievements": [],
-    "challenges": [],
-    "solutions": [],
-    "technologies": [],
-    "liveUrl": "",
-    "githubUrl": "",
-    "createdAt": "2025-11-04T08:36:06.097Z",
-    "updatedAt": "2025-11-04T08:36:06.097Z"
-  },
-  {
-    "id": 10,
-    "title": "denco brwo",
-    "description": "hello",
-    "category": "Full Stack",
-    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762249040/portfolio/projects/pqph59nm2xmbqbkrilo5.png",
-    "slug": "denco-brwo",
-    "overview": "",
-    "role": "",
-    "tasks": [],
-    "achievements": [],
-    "challenges": [],
-    "solutions": [],
-    "technologies": [],
-    "liveUrl": "",
-    "githubUrl": "",
-    "createdAt": "2025-11-04T09:37:33.312Z",
-    "updatedAt": "2025-11-04T09:37:57.579Z"
   }
 ]
