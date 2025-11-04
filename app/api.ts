@@ -30,7 +30,7 @@ export const projectService = {
   },
 
   // Update project
-  async updateProject(id: string, projectData: ProjectData) {
+  async updateProject(id: string, projectData: Project) {
     const response = await fetch(`/api/projects/${id}`, {
       method: 'PUT',
       headers: {
