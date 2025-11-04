@@ -6,30 +6,10 @@ import Link from "next/link";
 import { FaPlus } from "react-icons/fa";
 import ProjectForm from "./components/forms";
 import { projectService } from "./api";
+import { Project } from "@/types/project";
 
 // Check if admin features should be enabled
 const isAdminEnabled = process.env.NEXT_PUBLIC_ADMIN_ENABLED === 'true';
-
-// Simple interface without complex types
-interface Project {
-  id?: number;
-  title: string;
-  description: string;
-  category: string;
-  image: string;
-  slug: string;
-  overview?: string;
-  role?: string;
-  tasks?: string[];
-  achievements?: string[];
-  technologies?: string[];
-  challenges?: string[];
-  solutions?: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  createdAt?: string;
-  updatedAt?: string;
-}
 
 export default function RootLayout({
   children,
@@ -55,7 +35,7 @@ export default function RootLayout({
   const handleCreateProject = async (projectData: Project) => {
     try {
       // Use type assertion to bypass strict type checking
-      await projectService.createProject(projectData as any);
+      await projectService.createProject(projectData);
 
       // Refresh projects after creation
       const updatedProjects = await projectService.getProjects();
