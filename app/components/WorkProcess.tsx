@@ -150,7 +150,7 @@ const WorkProcess = () => {
   ];
 
   return (
-    <section id="process" className="container mx-auto max-w-6xl bg-linear-to-br from-white via-purple-50 to-purple-100 py-36">
+    <section id="process" className="container mx-auto max-w-6xl py-36">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-16">
