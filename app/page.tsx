@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { FaMedium, FaBriefcase, FaHeart, FaGithub, FaLinkedin, FaTwitter, FaEdit, FaTrash } from 'react-icons/fa';
-import { RiBook2Fill, RiLightbulbFlashLine, RiPaletteLine, RiRocketLine } from 'react-icons/ri';
 import { projectService } from './api';
 import ProjectForm from './components/forms';
 import WorkProcess from './components/WorkProcess';
@@ -112,7 +111,7 @@ export default function PortfolioPage() {
                 >
                   Let&apos;s discuss your project
                 </a>
-                <a href='/ikechukwu_frontend.pdf' target='_blank' download={'ikechukwu_frontend.pdf'} className="border border-purple-600 text-purple-600 px-8 py-3 cursor-pointer rounded-lg hover:bg-purple-600 hover:text-white transition-all font-medium">
+                <a href='/ikechukwu_frontend.pdf' target='_blank' download={'ikechukwu_frontend.pdf'} className="border border-purple-600 text-purple-600 px-8 py-3 cursor-pointer rounded-lg hover:bg-purple-600 hover:text-white transition-all font-medium text-center">
                   Download Resume
                 </a>
               </div>

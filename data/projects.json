@@ -509,5 +509,67 @@
     "githubUrl": "",
     "createdAt": "2025-11-05T13:43:12.328Z",
     "updatedAt": "2025-11-05T13:47:56.868Z"
+  },
+  {
+    "id": 12,
+    "title": "Vivee Aura Service Apartment Booking Website",
+    "description": "ViveeAura is a luxury short-stay/long-stay service apartment platform in Lagos, built to simplify property discovery, booking, and guest communication.\nThe platform provides browsing of premium apartments, real-time availability, online booking & payments, SEO visibility, and data-driven insights through tracking tools.",
+    "category": "Full Stack",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762370509/portfolio/projects/e6q31xkyqktqyw3npjs6.png",
+    "slug": "vivee-aura-service-apartment-booking-website",
+    "overview": "ViveeAura is a luxury short-stay/long-stay service apartment platform in Lagos, built to simplify property discovery, booking, and guest communication.\nThe platform provides browsing of premium apartments, real-time availability, online booking & payments, SEO visibility, and data-driven insights through tracking tools.",
+    "role": "Lead Full-Stack Developer",
+    "tasks": [
+      "Conducted project scoping. research. and translated requirements into UI/UX wireframes & mockups",
+      "Developed the front-end with Next.js + Tailwind. integrating booking and apartment listing flows",
+      "Implemented Paystack payment gateway for secure reservation and checkout",
+      "Built backend integration using WordPress/PHP for CMS content and booking management",
+      "Optimized site for SEO (metadata. sitemap. structured content) and integrated Google Tag Manager",
+      "Performed quality assurance: testing. debugging. performance optimization & asset compression",
+      "Launched production version and handled post-launch maintenance. updates. and security improvements."
+    ],
+    "achievements": [
+      "Delivered a modern",
+      "responsive web platform with intuitive navigation and immersive property visuals",
+      "Integrated an end-to-end booking and reservation system with Paystack payment support",
+      "Improved apartment discovery through filters",
+      "highlighted listings",
+      "and location-based guides",
+      "Implemented performance and SEO optimizations",
+      "improving search ranking and lead conversion",
+      "Delivered post-launch maintenance including feature updates",
+      "analytics",
+      "and security checks."
+    ],
+    "challenges": [
+      "Designing UX that works for short and extended accommodation guests",
+      "Integrating secure Paystack payments for local and international users",
+      "Maintaining high site performance despite large media assets",
+      "Ensuring SEO optimization while using hybrid (Next.js + WP) structure",
+      "Managing ongoing updates without affecting the live environment."
+    ],
+    "solutions": [
+      "Built UX flows and wireframes to enhance discovery + booking task efficiency",
+      "Integrated Paystack and ensured proper validation and callback handling",
+      "Leveraged image compression",
+      "lazy loading",
+      "CDN",
+      "and code optimization",
+      "Implemented SEO (metadata",
+      "sitemap",
+      "linking) + Google Tag Manager & monitoring",
+      "Used modular architecture + staging process for safe upgrades and bug resolution."
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "PHP / WordPress (booking + CMS)"
+    ],
+    "liveUrl": "https://viveeaura.com/",
+    "githubUrl": "",
+    "createdAt": "2025-11-05T19:27:11.746Z",
+    "updatedAt": "2025-11-05T19:29:20.207Z"
   }
 ]
