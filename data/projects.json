@@ -460,5 +460,54 @@
     "githubUrl": "",
     "createdAt": "2025-11-04T12:34:06.033Z",
     "updatedAt": "2025-11-04T12:34:06.033Z"
+  },
+  {
+    "id": 11,
+    "title": "Rally Trade Hedge Analytics Dashboard",
+    "description": "The Hedge Analytics Dashboard is a Vue 3 + Pinia + Vuetify–powered web application designed to help trading operations teams monitor client performance, hedge decisions, and market behavior. The system enables deep performance analytics, intelligent filtering, and operational decision-making through structured dashboards and detailed client profiles.",
+    "category": "Frontend",
+    "image": "https://res.cloudinary.com/drjxnqxyy/image/upload/v1762349472/portfolio/projects/yc3ygvgaaynqzyyfiehz.png",
+    "slug": "rally-trade-hedge-analytics-dashboard",
+    "overview": "The Hedge Analytics Dashboard is a Vue 3 + Pinia + Vuetify–powered web application designed to help trading operations teams monitor client performance, hedge decisions, and market behavior. The system enables deep performance analytics, intelligent filtering, and operational decision-making through structured dashboards and detailed client profiles.\n\nThis tool supports data-driven evaluation of profitability, risk, and trading patterns, with workflows to manage hedge status and document rationale behind risk management actions.",
+    "role": "Lead Frontend Developer",
+    "tasks": [
+      "Built a multi-filter client analytics dashboard with sortable performance metrics",
+      "Implemented detailed client profiles with charts. behavioral stats and tagging",
+      "Developed hedge-performance tracking with pre/post-hedge segmentation",
+      "Integrated Pinia state management and Chart.js visualizations",
+      "Designed responsive UI using Vuetify with Vue Router + Vite project setup"
+    ],
+    "achievements": [
+      "Faster trading risk evaluation",
+      "Better hedge decision accountability",
+      "Deep behavioral insights for each trader",
+      "Smarter segmentation & tagging",
+      "Performance improvement tracking."
+    ],
+    "challenges": [
+      "Large client datasets slowed rendering",
+      "Metrics (PnL",
+      "win rate",
+      "PF) needed to change dynamically",
+      "Accurate metric separation needed based on activation timestamp."
+    ],
+    "solutions": [
+      "Virtual table rendering",
+      "Shared timeframe utilities",
+      "Split datasets on hedge timestamp"
+    ],
+    "technologies": [
+      "Vue 3",
+      "Pinia",
+      "Vuetify",
+      "Typescript",
+      "Chart.js",
+      "Vue-router",
+      "Vite"
+    ],
+    "liveUrl": "https://www.hedge.rallyadmin.com",
+    "githubUrl": "",
+    "createdAt": "2025-11-05T13:43:12.328Z",
+    "updatedAt": "2025-11-05T13:47:56.868Z"
   }
 ]
