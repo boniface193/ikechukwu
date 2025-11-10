@@ -107,7 +107,7 @@ export default function ProjectDetailPage() {
         <section className="px-6 pb-12">
           <div className="container mx-auto max-w-6xl">
             <div className="bg-white rounded-2xl shadow-2xl shadow-purple-100 overflow-hidden border border-purple-100">
-              <div className="h-64 md:h-80 bg-linear-to-br from-purple-500 to-purple-700 overflow-hidden">
+              <div className="py-8 md:py-0 md:h-80 bg-linear-to-br from-purple-500 to-purple-700 overflow-hidden">
                 <div className="flex flex-col items-center text-white justify-center h-full px-6 text-center">
                   <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
                     {projectData.category}
