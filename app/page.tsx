@@ -99,7 +99,7 @@ export default function PortfolioPage() {
               </h1>
 
               <div className="text-lg text-gray-600 space-y-4 mb-8">
-                <p>— a full-stack JavaScript engineer with {yearsPassed}+ years of experience building performant apps using React, Next.js, Express, and AWS Serverless. I help businesses turn ideas into production-grade solutions.</p>
+                <p>—a full-stack JavaScript/TypeScript engineer with {yearsPassed}+ years of experience building performant apps using React/Vue/Angular, Next.js/Nuxt.js, Express, and AWS Serverless. I help businesses turn ideas into production-grade solutions.</p>
               </div>
 
               {/* CTA Buttons */}
@@ -258,7 +258,7 @@ export default function PortfolioPage() {
                 <div className="w-9 h-9 rounded-full bg-linear-to-r from-purple-600 to-purple-800 flex items-center justify-center text-white font-bold mr-2">B</div>
                 <span className='text-purple-700 font-semibold text-lg'>Boniface</span>
               </div>
-              <p className="text-purple-800 mt-2">Full-Stack JavaScript Engineer</p>
+              <p className="text-purple-800 mt-2">Full-Stack JavaScript/TypeScript Engineer</p>
             </div>
 
             {/* Social Links */}
